@@ -1,8 +1,47 @@
 {
   "compilerOptions": {
-    "target": "es5", //指定編譯生成的JS版本
-    "module": "commonjs", //指定生成哪種模組
+    "target": "es6", //指定編譯生成的JS版本
+
+    //module 指定生成哪種模組
+    //模組種類:'none', 'commonjs', 'amd', 'system', 'umd', 'es6', 'es2015', 'es2020', 'es2022', 'esnext', 'node16', 'nodenext'
+    "module": "es6",
+
+    // 編譯後的檔案存放目錄
+    "outDir": "./dist",
+
+    // 編譯後的所有 ts 檔案全部合併成一個檔案 （一般很少使用大部分都使用 webpack 編譯）
+    // "outFile": "./dist/app.js",
+
     "strict": true, //採用嚴格模式
-    "esModuleInterop": true //兼容模組導入的方式
-  }
+    "esModuleInterop": true, //兼容模組導入的方式
+
+    // 是否編譯 js 檔案
+    "allowJs": false,
+
+    // 檢查 js 語法是否符合語法規範
+    "checkJs": false,
+
+    //是否移除註解
+    "removeComments": false,
+
+    // 不產生編譯後的檔案
+    "noEmit": false,
+
+    //當有錯誤時就不編譯檔案
+    "noEmitOnError": false,
+
+    // 不能有 any 型別
+    "noImplicitAny": false,
+
+    // 不能有不明確的 this
+    "noImplicitThis": false
+  },
+
+  // include：指定要編譯的 ts 檔案
+  // ** 代表任意 目錄
+  // * 代表任意 檔案
+  "include": ["./src/**/*"],
+
+  // exclude：指定不要編譯的 ts 檔案
+  "exclude": ["./src/hello/**/*", "node_modules"]
 }
