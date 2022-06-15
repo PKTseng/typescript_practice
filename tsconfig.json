@@ -12,7 +12,7 @@
     // 編譯後的所有 ts 檔案全部合併成一個檔案 （一般很少使用大部分都使用 webpack 編譯）
     // "outFile": "./dist/app.js",
 
-    "strict": true, //採用嚴格模式
+    "strict": true, //所有嚴格模式
     "esModuleInterop": true, //兼容模組導入的方式
 
     // 是否編譯 js 檔案
@@ -28,13 +28,16 @@
     "noEmit": false,
 
     //當有錯誤時就不編譯檔案
-    "noEmitOnError": false,
+    "noEmitOnError": false
 
     // 不能有 any 型別
-    "noImplicitAny": false,
+    // "noImplicitAny": false,
 
     // 不能有不明確的 this
-    "noImplicitThis": false
+    // "noImplicitThis": false
+
+    // 嚴格檢查空值
+    // "strictNullChecks": false
   },
 
   // include：指定要編譯的 ts 檔案

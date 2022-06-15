@@ -9,7 +9,22 @@ console.log(b);
 
 
 
-// "noImplicitThis": true
-function fn() {
-  console.log(this);
+// function fn() {
+//   console.log(this);
+// }
+
+
+// "strictNullChecks": true
+let box = document.getElementById('box')
+
+// 兩種寫法
+
+if (box !== null) {
+  box.addEventListener('click', function () {
+    alert('hello')
+  })
 }
+
+box?.addEventListener('click', function () {
+  alert('hello')
+})
