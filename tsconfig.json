@@ -6,29 +6,23 @@
     //模組種類:'none', 'commonjs', 'amd', 'system', 'umd', 'es6', 'es2015', 'es2020', 'es2022', 'esnext', 'node16', 'nodenext'
     "module": "es6",
 
-    // 編譯後的檔案存放目錄
-    "outDir": "./dist",
+    "strict": true //所有嚴格模式
+    // "esModuleInterop": true, //兼容模組導入的方式
 
-    // 編譯後的所有 ts 檔案全部合併成一個檔案 （一般很少使用大部分都使用 webpack 編譯）
-    // "outFile": "./dist/app.js",
+    // // 是否編譯 js 檔案
+    // "allowJs": false,
 
-    "strict": true, //所有嚴格模式
-    "esModuleInterop": true, //兼容模組導入的方式
+    // // 檢查 js 語法是否符合語法規範
+    // "checkJs": false,
 
-    // 是否編譯 js 檔案
-    "allowJs": false,
+    // //是否移除註解
+    // "removeComments": false,
 
-    // 檢查 js 語法是否符合語法規範
-    "checkJs": false,
+    // // 不產生編譯後的檔案
+    // "noEmit": false,
 
-    //是否移除註解
-    "removeComments": false,
-
-    // 不產生編譯後的檔案
-    "noEmit": false,
-
-    //當有錯誤時就不編譯檔案
-    "noEmitOnError": false
+    // //當有錯誤時就不編譯檔案
+    // "noEmitOnError": false
 
     // 不能有 any 型別
     // "noImplicitAny": false,
@@ -46,5 +40,11 @@
   "include": ["./src/**/*"],
 
   // exclude：指定不要編譯的 ts 檔案
-  "exclude": ["./src/hello/**/*", "node_modules"]
+  "exclude": ["src/noCompiler/**/*", "node_modules"],
+
+  // 編譯後的所有 ts 檔案全部合併成一個檔案 （一般很少使用大部分都使用 webpack 編譯）
+  // "outFile": "./dist/app.js",
+
+  // 編譯後的檔案存放目錄
+  "outDir": "./dist"
 }
